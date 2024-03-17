@@ -1,46 +1,41 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class PlayerPathChecker : MonoBehaviour
 {
-    private bool enteredNewPath = false;
     public string NextScene;
+    public AudioSource scaryAudio;
+    public GameObject Canvas;
+    public VideoSource video;
+    public GameObject deadzone;
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-       
-        if (other.CompareTag("path"))
-        {
-            enteredNewPath = false; 
-            
-        }
-        Check();
-    }
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-  
-        if (other.CompareTag("path"))
-        {
-            enteredNewPath = true; 
-        }
-        if (other.CompareTag("teleporter") && !enteredNewPath)
+        if (other.CompareTag("teleporter") )
         {
             SceneManager.LoadScene(NextScene);
             return;
         }
 
-    }
-
-    private void Check()
-    {
-
-        if (enteredNewPath == false);
+        if (other.CompareTag("death"))
         {
             SceneManager.LoadScene("Assets/Scenes/Intro.unity");
         }
+
+        if (other.CompareTag("scarry"))
+        {
+            scaryAudio.Play() ;
+            Canvas.SetActive(true);
+            deadzone.SetActive(false) ;
+        }
     }
+
+
+
 
 
 }

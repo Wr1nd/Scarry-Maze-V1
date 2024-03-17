@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
-    public void LoadScene1()
+    public void LoadScene()
     {
-        SceneManager.LoadScene(1);
-        Debug.LogError("pressed");
+        SceneManager.LoadScene("Assets/Scenes/Level_1.unity");
+
     }
 }

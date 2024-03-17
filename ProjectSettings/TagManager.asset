@@ -6,6 +6,9 @@ TagManager:
   tags:
   - path
   - teleporter
+  - death
+  - scary
+  - scarry
   layers:
   - Default
   - TransparentFX
