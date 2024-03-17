@@ -221,7 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c4e514498676640bfc07d747feda0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Assets/Scenes/Level_3.unity
 --- !u!61 &80658970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1305,7 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8bab30de8ec1f4db0a221d8f9f5a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Assets/Scenes/Level_2.unity
+  NextScene: Assets/Scenes/Level_3.unity
   scaryAudio: {fileID: 0}
   Canvas: {fileID: 0}
   video: 0
